@@ -14,7 +14,10 @@ public class Main {
                 new Func1().process();
                 break;
             case 2:
-                new Func1().process();
+                new Func2().process();
+                break;
+            case 3:
+                new Func3().process();
                 break;
             default:
         }
