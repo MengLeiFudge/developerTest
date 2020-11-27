@@ -6,7 +6,7 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * @author MLJ
+ * @author MengLeiFudge
  */
 public class Func1 {
 

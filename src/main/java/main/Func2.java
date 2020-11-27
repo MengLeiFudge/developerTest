@@ -1,7 +1,7 @@
 package main;
 
 /**
- * @author MLJ
+ * @author MengLeiFudge
  */
 public class Func2 {
 }

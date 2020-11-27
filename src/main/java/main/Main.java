@@ -2,6 +2,9 @@ package main;
 
 import java.util.Scanner;
 
+/**
+ * @author MengLeiFudge
+ */
 public class Main {
     public static void main(String[] args) {
         System.out.println("输入功能序号");
