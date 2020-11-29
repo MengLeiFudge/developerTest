@@ -17,7 +17,7 @@ public class Main {
                 processFunc1();
                 break;
             case 3:
-                new Func3().process();
+                new Clac().process();
                 break;
             default:
         }

@@ -2,9 +2,9 @@ package main;
 
 import java.util.Scanner;
 
-public class Func3 {
+public class Clac {
 
-    Func3() {
+    Clac() {
 
     }
 
