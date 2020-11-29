@@ -24,15 +24,14 @@ public class PrintFile {
     public boolean createFile(String fileName) {
         try {
             File f = FileUtils.getFile(dir, fileName);
-            FileUtils.forceMkdirParent(dir);
-            if (f.exists()) {
-                if (f.isDirectory()) {
-                    System.out.println("已存在同名文件夹！");
-                    return false;
-                } else {
-                    System.out.println("已存在！");
-                    return true;
-                }
+            FileUtils.forceMkdirParent(f);
+            if (f.isDirectory()) {
+                System.out.println("已存在同名文件夹！");
+                return false;
+            }
+            if (f.exists()){
+                System.out.println("该文件已存在！");
+                return true;
             }
             if (!f.createNewFile()) {
                 System.out.println("创建失败！");
@@ -68,7 +67,7 @@ public class PrintFile {
     }
 
     public String sizeToStr(long size) {
-        if (size < 20) {
+        if (size < 0) {
             return "size小于0";
         } else if (size < 1024) {
             return size + "字节";

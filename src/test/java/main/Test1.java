@@ -2,10 +2,8 @@ package main;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.mockito.junit.MockitoJUnitRunner;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -51,15 +49,10 @@ public class Test1 {
                 .thenReturn(1000L)
                 .thenReturn(53760L)
                 .thenReturn(1310720L);
-        assertEquals(printFile.sizeToStr(p.getFileSize("1.txt")),
-                //"10字节");
-                "size小于0");
-        assertEquals(printFile.sizeToStr(p.getFileSize("2.txt")),
-                "1000字节");
-        assertEquals(printFile.sizeToStr(p.getFileSize("3.txt")),
-                "52.5KB");
-        assertEquals(printFile.sizeToStr(p.getFileSize("4.txt")),
-                "1.25MB");
+        assertEquals("10字节", printFile.sizeToStr(p.getFileSize("1.txt")));
+        assertEquals("1000字节", printFile.sizeToStr(p.getFileSize("2.txt")));
+        assertEquals("52.5KB", printFile.sizeToStr(p.getFileSize("3.txt")));
+        assertEquals("1.25MB", printFile.sizeToStr(p.getFileSize("4.txt")));
         verify(p, times(4)).getFileSize(anyString());
     }
 
