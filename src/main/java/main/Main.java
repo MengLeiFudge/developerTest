@@ -16,9 +16,6 @@ public class Main {
             case 1:
                 processFunc1();
                 break;
-            case 3:
-                new Clac().process();
-                break;
             default:
         }
     }
