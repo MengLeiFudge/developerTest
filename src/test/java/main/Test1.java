@@ -52,7 +52,8 @@ public class Test1 {
                 .thenReturn(53760L)
                 .thenReturn(1310720L);
         assertEquals(printFile.sizeToStr(p.getFileSize("1.txt")),
-                "10字节");
+                //"10字节");
+                "size小于0");
         assertEquals(printFile.sizeToStr(p.getFileSize("2.txt")),
                 "1000字节");
         assertEquals(printFile.sizeToStr(p.getFileSize("3.txt")),
